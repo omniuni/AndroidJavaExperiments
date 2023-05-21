@@ -1,6 +1,29 @@
 package com.omniimpact.javaexperiments.Activities;
 
-import android.app.Activity;
+import android.os.Bundle;
 
-public class ActivityMain extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.omniimpact.javaexperiments.R;
+
+import Fragments.FragmentMain;
+
+public class ActivityMain extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.layout_content_view_single_fragment);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Fragment mainScreen = new FragmentMain();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.id_fragment_main, mainScreen);
+        ft.commitNow();
+    }
 }
