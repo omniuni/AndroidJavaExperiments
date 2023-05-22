@@ -11,16 +11,38 @@ import com.omniimpact.javaexperiments.R;
 import Fragments.FragmentMain;
 
 /**
- * Main activity for the application.
+ * Main activity for the application where we start execution.
+ *
+ * Activities are individual "whole windows" of a Android application.
  */
 public class ActivityMain extends AppCompatActivity {
 
+    /**
+     * Occurs on the instantiation of the application, creates the initial
+     * layout and sets it to the current content view.
+     * TODO: Add a point about how this is different from onStart()
+     * @param savedInstanceState TODO: Unknown, what is this?
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_content_view_single_fragment);
     }
 
+    /**
+     * Occurs on starting the application (after instantiation). Creates
+     * the main screen Fragment objects, sets up the FragmentTransaction,
+     * and instantiates a new FragmentManager to handle the "stack" of
+     * screens. This adds the first Fragment to the transactions and
+     * commits it to start the application such that the user can
+     * begin interacting with it.
+     *
+     * The Fragments in the FragmentManager are the UI elements that you
+     * navigate "forward" by opening more, then navigate "backwards"
+     * by using the system's "back" button. Using the "back" button on
+     * the root (first/main) element will exit the application (or prompt
+     * to exit).
+     */
     @Override
     protected void onStart() {
         super.onStart();
