@@ -10,6 +10,9 @@ import com.omniimpact.javaexperiments.R;
 
 import Fragments.FragmentMain;
 
+/**
+ * Main activity for the application.
+ */
 public class ActivityMain extends AppCompatActivity {
 
     @Override
