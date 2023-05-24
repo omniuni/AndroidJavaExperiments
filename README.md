@@ -2,7 +2,8 @@
 
 This is general information about the project.
 
-#Android App For Learning Java
+# Android App For Learning Java
+
 ## Table Of Contents
 * [About The Project](#about-the-project)
 * [Built With](#built-with)
