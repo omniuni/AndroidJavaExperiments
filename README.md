@@ -23,7 +23,7 @@ This will give anyone who wants to learn Java a more interactive way to do so.
 * Android Studio Flamingo | 2022.2.1
 
 ## Installation and Setup
-Navigate to the [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjw67ajBhAVEiwA2g_jEJTKBz_Uk-ZZz1ZZ67CIZlwE_kwawYZJcSdyhHUMscKrl4S6eIgrTBoC_F8QAvD_BwE&gclsrc=aw.ds) webpage and click the *Download Android Studio Flamingo* button. Accept the terms to the agreement that pops up and then click the download button. Once that installs, follow the steps detailed below to get the environment set up and ready to use.
+Navigate to the [Android Studio](https://developer.android.com/studio) webpage and click the *Download Android Studio Flamingo* button. Accept the terms to the agreement that pops up and then click the download button. Once that installs, follow the steps detailed below to get the environment set up and ready to use.
 
 You also may need to install Git if you don't have it. Navigate to the [Git](https://git-scm.com/downloads) download page and download and install Git for your system.
 
