@@ -18,10 +18,15 @@ import Fragments.FragmentMain;
 public class ActivityMain extends AppCompatActivity {
 
     /**
-     * Occurs on the instantiation of the application, creates the initial
+     * Occurs on the instantiation of the activity, creates the initial
      * layout and sets it to the current content view.
-     * TODO: Add a point about how this is different from onStart()
-     * @param savedInstanceState TODO: Unknown, what is this?
+     * Note: onCreate is different from onStart because onCreate is called
+     * once while onStart can be called whenever you return to the activity.
+     *
+     * savedInstanceState explicitly stores stateful information back to
+     * the activity if it is cleared from memory so that you can return a
+     * Bundle from onSaveInstanceState() that will be passed back to onCreate()
+     * to remember where you left off.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +35,7 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     /**
-     * Occurs on starting the application (after instantiation). Creates
+     * Occurs on starting the activity (after instantiation). Creates
      * the main screen Fragment objects, sets up the FragmentTransaction,
      * and instantiates a new FragmentManager to handle the "stack" of
      * screens. This adds the first Fragment to the transactions and
