@@ -4,22 +4,22 @@ import com.omniimpact.javaexperiments.BaseClasses.BaseExperimentTypes.Experiment
 
 import java.util.ArrayList;
 
-public class FizzBuzz20 extends ExperimentTypeTextRunOnce {
+public class AboutThisApp extends ExperimentTypeTextRunOnce {
 
 	@Override
 	public String experimentName() {
-		return "FizzBuzz 20";
+		return "About This App";
 	}
 
 	@Override
 	public String experimentDescription() {
-		return "Classic FizzBuzz up to 20";
+		return "Display Information About this App";
 	}
 
 	@Override
 	public ArrayList<String> getText() {
 		ArrayList<String> output = new ArrayList<>();
-		output.add("Hello FizzBuzz 20!");
+		output.add(mActivity.getPackageName());
 		return output;
 	}
 

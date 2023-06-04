@@ -4,29 +4,22 @@ import com.omniimpact.javaexperiments.BaseClasses.BaseExperimentTypes.Experiment
 
 import java.util.ArrayList;
 
-public class Fibonacci18 extends ExperimentTypeTextRunOnce {
+public class DateAndTime extends ExperimentTypeTextRunOnce {
 
 	@Override
 	public String experimentName() {
-		return "Fibonacci 18";
+		return "Date And Time";
 	}
 
 	@Override
 	public String experimentDescription() {
-		return "Displays the first 18 numbers in the Fibonacci Sequence";
+		return "Displays the current Date and Time.";
 	}
 
 	@Override
 	public ArrayList<String> getText() {
 		ArrayList<String> output = new ArrayList<>();
-		output.add("0");
-		output.add("1");
-		output.add("1");
-		output.add("2");
-		output.add("3");
-		output.add("5");
-		output.add("8");
-		output.add("...");
+		output.add("Date and Time");
 		return output;
 	}
 
