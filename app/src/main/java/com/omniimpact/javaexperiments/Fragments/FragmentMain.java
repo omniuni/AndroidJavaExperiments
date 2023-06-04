@@ -18,26 +18,27 @@ import com.omniimpact.javaexperiments.R;
  */
 public class FragmentMain extends Fragment {
 
-    /**
-     * Occurs when creating a new FragmentMain object.
-     * In this case, since it is the main Fragment, it loads
-     * the main fragment layout to show the user.
-     *
-     * inflater is a special service provided by Android that
-     * lets you create views that will appear on the screen.
-     *
-     * container is the parent container that is provided to the
-     * layout inflater in order to make sure that the view is
-     * displayed at the correct size and proportions.
-     *
-     * savedInstanceState stores a saved state to a Bundle. If a
-     * saveState bundle was provided, this will return it so that
-     * the Fragment can be updated as necessary.
-     * @return View object of the current UI
-     */
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.layout_fragment_main, container, false);
-    }
+	/**
+	 * Occurs when creating a new FragmentMain object.
+	 * In this case, since it is the main Fragment, it loads
+	 * the main fragment layout to show the user.
+	 * <p>
+	 * inflater is a special service provided by Android that
+	 * lets you create views that will appear on the screen.
+	 * <p>
+	 * container is the parent container that is provided to the
+	 * layout inflater in order to make sure that the view is
+	 * displayed at the correct size and proportions.
+	 * <p>
+	 * savedInstanceState stores a saved state to a Bundle. If a
+	 * saveState bundle was provided, this will return it so that
+	 * the Fragment can be updated as necessary.
+	 *
+	 * @return View object of the current UI
+	 */
+	@Nullable
+	@Override
+	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		return inflater.inflate(R.layout.layout_fragment_main, container, false);
+	}
 }
