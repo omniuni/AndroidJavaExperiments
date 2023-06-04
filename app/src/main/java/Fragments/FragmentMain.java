@@ -23,9 +23,16 @@ public class FragmentMain extends Fragment {
      * In this case, since it is the main Fragment, it loads
      * the main fragment layout to show the user.
      *
-     * @param inflater TODO: Yeah let's explain this
-     * @param container TODO: "
-     * @param savedInstanceState TODO: "
+     * inflater is a special service provided by Android that
+     * lets you create views that will appear on the screen.
+     *
+     * container is the parent container that is provided to the
+     * layout inflater in order to make sure that the view is
+     * displayed at the correct size and proportions.
+     *
+     * savedInstanceState stores a saved state to a Bundle. If a
+     * saveState bundle was provided, this will return it so that
+     * the Fragment can be updated as necessary.
      * @return View object of the current UI
      */
     @Nullable
