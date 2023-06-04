@@ -1,16 +1,17 @@
 package com.omniimpact.javaexperiments.Utilities;
 
-import com.omniimpact.javaexperiments.BaseClasses.BaseExperimentTypes.ExperimentTypeTextRunOnce;
+import com.omniimpact.javaexperiments.Experiments.TextRunOnce.Fibonacci100;
 import com.omniimpact.javaexperiments.Experiments.TextRunOnce.FizzBuzz;
+
+import java.util.ArrayList;
 
 public final class ConstantExperimentsList {
 
-	public static String[] experimentTypes = {
-			ExperimentTypeTextRunOnce.class.getName()
-	};
-
-	public static String[] experiments = {
-			FizzBuzz.class.getName()
+	public static ArrayList<Class<?>> experiments = new ArrayList<>() {
+		{
+			add(FizzBuzz.class);
+			add(Fibonacci100.class);
+		}
 	};
 
 }

@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.omniimpact.javaexperiments.Fragments.FragmentMain;
 import com.omniimpact.javaexperiments.R;
+import com.omniimpact.javaexperiments.Utilities.UtilityGetExperiments;
 
 /**
  * Main activity for the application where we start execution.
@@ -50,6 +51,7 @@ public class ActivityMain extends AppCompatActivity {
 	@Override
 	protected void onStart() {
 		super.onStart();
+		UtilityGetExperiments.getInstance(); // Initialize the Experiments Utility
 		Fragment mainScreen = new FragmentMain();
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		ft.add(R.id.id_fragment_main, mainScreen);
