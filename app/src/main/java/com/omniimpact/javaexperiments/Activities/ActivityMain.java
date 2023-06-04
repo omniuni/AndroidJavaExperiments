@@ -55,4 +55,5 @@ public class ActivityMain extends AppCompatActivity {
 		ft.add(R.id.id_fragment_main, mainScreen);
 		ft.commitNow();
 	}
+
 }
