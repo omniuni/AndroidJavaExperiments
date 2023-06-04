@@ -7,7 +7,7 @@ public abstract class ExperimentTypeTextRunOnce extends BaseExperiment implement
 
 	@Override
 	public String experimentTypeName() {
-		return "Text Run Once";
+		return "Text, Run Once";
 	}
 
 	@Override
@@ -15,4 +15,8 @@ public abstract class ExperimentTypeTextRunOnce extends BaseExperiment implement
 		return IExperimentTextRunOnce.class;
 	}
 
+	@Override
+	public void run() {
+		// Do nothing. Since this only will return text, we can just do whatever we need there.
+	}
 }

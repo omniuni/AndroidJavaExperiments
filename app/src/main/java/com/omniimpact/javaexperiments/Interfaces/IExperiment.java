@@ -1,8 +1,9 @@
 package com.omniimpact.javaexperiments.Interfaces;
 
-public interface IMetaExperimentInfo {
+public interface IExperiment {
 
 	String experimentName();
 	String experimentDescription();
+	void run();
 
 }
