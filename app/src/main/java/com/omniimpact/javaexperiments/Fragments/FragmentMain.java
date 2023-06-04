@@ -54,7 +54,7 @@ public class FragmentMain extends Fragment {
 
 		ArrayList<ModelMetaExperimentType> experimentTypeList = UtilityGetExperiments.getInstance().getExperimentTypesList();
 		for(ModelMetaExperimentType experimentType : experimentTypeList){
-			Log.d(getTag(), experimentType.getName());
+			Log.d(getTag(), "Experiment Type: "+experimentType.getName());
 		}
 
 		ArrayList<ModelMetaExperiment> experimentsList = UtilityGetExperiments.getInstance().getExperiments();
