@@ -4,23 +4,21 @@ import com.omniimpact.javaexperiments.BaseClasses.BaseExperimentTypes.Experiment
 
 import java.util.ArrayList;
 
-public class FizzBuzz extends ExperimentTypeTextRunOnce {
+public class Fibonacci100 extends ExperimentTypeTextRunOnce {
 
 	@Override
 	public String experimentName() {
-		return "FizzBuzz";
+		return "Fibonacci 100";
 	}
 
 	@Override
 	public String experimentDescription() {
-		return "Classic FizzBuzz";
+		return "Displays the first 100 numbers in the Fibonacci Sequence";
 	}
 
 	@Override
 	public ArrayList<String> getText() {
-		ArrayList<String> output = new ArrayList<>();
-		output.add("Hello FizzBuzz!");
-		return output;
+		return null;
 	}
 
 }

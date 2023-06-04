@@ -1,6 +1,7 @@
 package com.omniimpact.javaexperiments.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.omniimpact.javaexperiments.Models.ModelMetaExperiment;
+import com.omniimpact.javaexperiments.Models.ModelMetaExperimentType;
 import com.omniimpact.javaexperiments.R;
+import com.omniimpact.javaexperiments.Utilities.UtilityGetExperiments;
+
+import java.util.ArrayList;
 
 /**
  * This class represents the main Fragment UI element, which
@@ -41,4 +47,21 @@ public class FragmentMain extends Fragment {
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.layout_fragment_main, container, false);
 	}
+
+	@Override
+	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+
+		ArrayList<ModelMetaExperimentType> experimentTypeList = UtilityGetExperiments.getInstance().getExperimentTypesList();
+		for(ModelMetaExperimentType experimentType : experimentTypeList){
+			Log.d(getTag(), experimentType.getName());
+		}
+
+		ArrayList<ModelMetaExperiment> experimentsList = UtilityGetExperiments.getInstance().getExperiments();
+		for(ModelMetaExperiment experiment : experimentsList){
+			Log.d(getTag(), experiment.getExperimentName()+": "+experiment.getExperimentDescription());
+		}
+
+	}
+
 }
