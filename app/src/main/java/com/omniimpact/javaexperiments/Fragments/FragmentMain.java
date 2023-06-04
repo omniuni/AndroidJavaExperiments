@@ -1,4 +1,4 @@
-package Fragments;
+package com.omniimpact.javaexperiments.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

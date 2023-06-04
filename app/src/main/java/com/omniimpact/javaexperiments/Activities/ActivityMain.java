@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.omniimpact.javaexperiments.R;
 
-import Fragments.FragmentMain;
+import com.omniimpact.javaexperiments.Fragments.FragmentMain;
 
 /**
  * Main activity for the application where we start execution.
