@@ -1,9 +1,15 @@
 package com.omniimpact.javaexperiments.BaseClasses.BaseExperimentTypes;
 
+import android.app.Activity;
+import android.app.Application;
+
 import com.omniimpact.javaexperiments.BaseClasses.BaseExperiment;
 import com.omniimpact.javaexperiments.Interfaces.IExperimentTextRunOnce;
 
 public abstract class ExperimentTypeTextRunOnce extends BaseExperiment implements IExperimentTextRunOnce {
+
+	protected Application mApplication;
+	protected Activity mActivity;
 
 	@Override
 	public String experimentTypeName() {
@@ -13,6 +19,16 @@ public abstract class ExperimentTypeTextRunOnce extends BaseExperiment implement
 	@Override
 	public Class<?> experimentRunnerInterface() {
 		return IExperimentTextRunOnce.class;
+	}
+
+	@Override
+	public void provideApplicationContext(Application application) {
+		mApplication = application;
+	}
+
+	@Override
+	public void provideActivityContext(Activity activity) {
+		mActivity = activity;
 	}
 
 	@Override
