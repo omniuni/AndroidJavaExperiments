@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="8dp">
+	<ImageView
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:src="@mipmap/ic_launcher"
+		android:layout_marginEnd="@dimen/padding_screen_default"
+		android:id="@+id/id_iv_list_icon"/>
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="11sp"
+		android:text="Experiment Type"
+		android:layout_toRightOf="@id/id_iv_list_icon"
+		android:textAllCaps="true"
+		android:id="@+id/id_tv_list_item_tag"/>
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/id_tv_list_item_tag"
+		android:layout_toRightOf="@id/id_iv_list_icon"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		android:text="Experiment Title"
+		android:id="@+id/id_tv_list_item_title"/>
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Experiment Description"
+		android:textSize="13sp"
+		android:layout_below="@id/id_tv_list_item_title"
+		android:layout_toRightOf="@id/id_iv_list_icon"
+		android:id="@+id/id_tv_list_item_subtitle"/>
+</RelativeLayout>
