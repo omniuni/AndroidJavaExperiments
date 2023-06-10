@@ -1,15 +1,25 @@
 package com.omniimpact.javaexperiments.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.omniimpact.javaexperiments.Models.ModelMetaExperiment;
+import com.omniimpact.javaexperiments.Models.ModelMetaExperimentType;
 import com.omniimpact.javaexperiments.R;
+import com.omniimpact.javaexperiments.UI.Adapters.AdapterExperimentsList;
+import com.omniimpact.javaexperiments.Utilities.UtilityGetExperiments;
+
+import java.util.ArrayList;
 
 /**
  * This class represents the main Fragment UI element, which
@@ -17,6 +27,8 @@ import com.omniimpact.javaexperiments.R;
  * using the application.
  */
 public class FragmentMain extends Fragment {
+
+	private View mRootView;
 
 	/**
 	 * Occurs when creating a new FragmentMain object.
@@ -39,6 +51,35 @@ public class FragmentMain extends Fragment {
 	@Nullable
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.layout_fragment_main, container, false);
+		mRootView = inflater.inflate(R.layout.layout_fragment_main, container, false);
+		return mRootView;
 	}
+
+	@Override
+	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+
+		ArrayList<ModelMetaExperimentType> experimentTypeList = UtilityGetExperiments.getInstance().getExperimentTypesList();
+		for(ModelMetaExperimentType experimentType : experimentTypeList){
+			Log.d(getTag(), "Experiment Type: "+experimentType.getName());
+		}
+
+		ArrayList<ModelMetaExperiment> experimentsList = UtilityGetExperiments.getInstance().getExperiments();
+		for(ModelMetaExperiment experiment : experimentsList){
+			Log.d(getTag(), experiment.getExperimentName()+": "+experiment.getExperimentDescription());
+		}
+
+		ListView myList = mRootView.findViewById(R.id.id_lv_experiments);
+		AdapterExperimentsList myAdapter = new AdapterExperimentsList(requireContext());
+		myList.setAdapter(myAdapter);
+
+		myList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Toast.makeText(getContext(), "Clicked item: "+position, Toast.LENGTH_SHORT).show();
+			}
+		});
+
+	}
+
 }
